@@ -33,6 +33,7 @@ vagrant up
 3.Once the box is up, we can perform unattended install of Percona server for MySql
 
 Copy the install.sh bash script from this repo.
+
 Execute the script :  sudo sh install.sh  (This will deploy and bring up the percona server with password set as *"root"*)
 
 Note : To use a different password , modify the variables at the begining of the install.sh script 
