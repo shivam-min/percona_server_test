@@ -1,0 +1,55 @@
+# create a new database
+
+create database books
+
+# Restore the table dump for three tables (Replace 
+
+mysql -u root -p root books < BX-Book-Ratings.sql
+mysql -u root -p root books < BX-Books.sql
+mysql -u root -p root books < BX-Users.sql
+
+# First we create a seprate table by joining the three tables which contains rating, title and location 
+
+CREATE TABLE books_by_country
+SELECT
+`BX-Book-Ratings`.`Book-rating`,`BX-Books`.`Book-title`,REPLACE(`BX-Users`.`Location`,CONCAT(SUBSTRING_INDEX(`BX-Users`.`Location`, ',', 2),', '),'') as Country FROM `BX-Book-Ratings`
+LEFT JOIN `BX-Books` ON `BX-Books`.`ISBN` = `BX-Book-Ratings`.`ISBN`
+LEFT JOIN `BX-Users` ON `BX-Users`.`User-ID` = `BX-Book-Ratings`.`User-ID` ;
+
+#create a table for top 10 books for each country
+
+CREATE TABLE `Top_books` (
+  `Country` varchar(250) DEFAULT NULL,
+  `Book-title` varchar(255) DEFAULT NULL,
+  `Book_ranking` decimal(32,0) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+# Using below query we can get top 10 books for each country 
+SELECT
+`books_by_country`.`Country`,
+`books_by_country`.`Book-title`,
+SUM(`books_by_country`.`Book-rating`) as Book_ranking
+FROM `books_by_country`
+WHERE `books_by_country`.`Country`= 'USA'
+Group BY `books_by_country`.`Country`,`books_by_country`.`Book-title`
+ORDER BY Book_ranking DESC
+LIMIT 10;
+
+# We can populate the data in the Top_books table using the below queries for each distinct country
+
+insert into Top_books
+(SELECT `books_by_country`.`Country`, `books_by_country`.`Book-title`, SUM(`books_by_country`.`Book-rating`) 
+as Book_ranking FROM `books_by_country`
+WHERE `books_by_country`.`Country`= 'usa' Group BY `books_by_country`.`Country`,`books_by_country`.`Book-title` 
+ORDER BY Book_ranking DESC LIMIT 10);
+
+insert into Top_books
+(SELECT `books_by_country`.`Country`, `books_by_country`.`Book-title`, SUM(`books_by_country`.`Book-rating`) 
+as Book_ranking FROM `books_by_country`
+WHERE `books_by_country`.`Country`= 'canada' Group BY `books_by_country`.`Country`,`books_by_country`.`Book-title` 
+ORDER BY Book_ranking DESC LIMIT 10);
+
+
+
+
