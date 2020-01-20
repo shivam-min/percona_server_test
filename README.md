@@ -1,5 +1,7 @@
-## percona_server_test
-Percona server for MySQL 5.7 automated deployment using vagrant ubuntu box and shell provisioning
+## Introduction
+This setup can be used to deploy Percona server for MySQL 5.7 on ubuntu 16 x64 Vagrant box.
+We will use virtualbox as provider for vagrant
+ 
 
 
 ## Requirements
@@ -11,8 +13,25 @@ an Internet connection for the VM's
 
 
 ## Instructions to use
-Once you have your requirements ready, it's very easy to deploy your boxes:
+Once you have your requirements ready, we can deploy using below steps :
+1. Setup the Vagrant workspace
 
+mkdir db_server  
+cd db_server
+vagrant init  (This will create the vagrant file)
+
+2. Replace the contents of the vagrantfile generated with **config** available in this repository and bring up the box
+
+cat config > Vagrantfile
+
+vagrant up 
+
+3.Once the box is up, we can perform unattended install of Percona server for MySql
+
+Copy the install.sh bash script from this repo.
+Execute the script :  sudo sh install.sh  (This will deploy and bring up the percona server with password set as *"root"*)
+
+Note : To use a different password , modify the variables at the begining of the install.sh script 
 
 ## How to setup the environment
 These are the step to run to be able to setup everything you need.
