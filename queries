@@ -2,7 +2,7 @@
 
 create database books
 
-# Restore the table dump for three tables (Replace 
+# Restore the table dump for three tables (Replace **TYPE=MyISAM** with **ENGINE=MyISAM** as TYPE is depreceated in MySQL 5.7 )
 
 mysql -u root -p root books < BX-Book-Ratings.sql
 mysql -u root -p root books < BX-Books.sql
