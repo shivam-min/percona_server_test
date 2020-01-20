@@ -10,7 +10,8 @@ A Ubuntu 16 x86_64 box to use with Vagrant.
 VirtualBox - https://www.virtualbox.org/
 
 A working Vagrant environment - http://vagrantup.com/
-an Internet connection for the VM's
+
+An Internet connection for the VM's
 
 
 ## Instructions to use
