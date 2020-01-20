@@ -10,7 +10,7 @@ a working Vagrant environment - http://vagrantup.com/
 an Internet connection for the VM's
 
 
-#Instructions to use
+# Instructions to use
 Once you have your requirements ready, it's very easy to deploy your boxes:
 
 $ git clone https://github.com/lefred/percona-cluster.git
@@ -21,7 +21,7 @@ This will deploy the 3 machines: percona1, percona2 and percona3.
 And this is all !
 
 
-#How to setup the environment
+# How to setup the environment
 These are the step to run to be able to setup everything you need.
 
 VirtualBox
