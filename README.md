@@ -32,9 +32,9 @@ Once you have your requirements ready, we can deploy using below steps :
 
 3.Once the box is up, we can perform unattended install of Percona server for MySql
 
-Copy the install.sh bash script from this repo.
+Copy the install_percona_mysql.sh bash script from this repo.
 
-Execute the script :  **sudo sh install.sh**  (This will deploy and bring up the percona server with password set as *"root"*)
+Execute the script :  **sudo sh install_percona_mysql.sh**  (This will deploy and bring up the percona server with password set as *"root"*)
 
 Note : To use a different password , modify the variables at the begining of the install.sh script 
 
