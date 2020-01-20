@@ -19,7 +19,9 @@ Once you have your requirements ready, we can deploy using below steps :
 1. Setup the Vagrant workspace
 
 mkdir db_server  
+
 cd db_server
+
 vagrant init  (This will create the vagrant file)
 
 2. Replace the contents of the vagrantfile generated with **config** available in this repository and bring up the box
