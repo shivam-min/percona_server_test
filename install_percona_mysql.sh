@@ -3,7 +3,7 @@
 #set the mysql root password
 MYSQL_ROOT_PASSWORD=root
 
-#Setup the officail percona apt-repository
+#Setup the official percona apt-repository
 wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb
 sudo dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb
 sudo apt-get update
