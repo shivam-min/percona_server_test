@@ -36,7 +36,7 @@ Copy the install_percona_mysql.sh bash script from this repo.
 
 Execute the script :  **sudo sh install_percona_mysql.sh**  (This will deploy and bring up the percona server with password set as *"root"*)
 
-Note : To use a different password , modify the variables at the begining of the install.sh script 
+Note : To use a different password , modify the variables at the begining of the install_percona_mysql.sh script 
 
 ## How to setup the environment
 These are the step to run to be able to setup everything you need.
