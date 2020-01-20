@@ -30,7 +30,12 @@ Once you have your requirements ready, we can deploy using below steps :
 
 **vagrant up** 
 
-3.Once the box is up, we can perform unattended install of Percona server for MySql
+3.Once the VM is up, we can perform unattended install of Percona server for MySql
+
+Login to the VM using ssh
+
+**cd /db_servre**
+**vagrant ssh**
 
 Copy the install_percona_mysql.sh bash script from this repo.
 
