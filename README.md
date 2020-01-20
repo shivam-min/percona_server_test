@@ -23,7 +23,7 @@ And this is all !
 ## How to setup the environment
 These are the step to run to be able to setup everything you need.
 
-#VirtualBox
+# VirtualBox
 
 On RedHat/CentOS/Fedora  
 yum install virtualbox
@@ -31,6 +31,7 @@ yum install virtualbox
 On Ubuntu/Debian
 apt-get install virtualbox
 
-#vagrant
+# vagrant
+
 apt-get install vagrant
 Import the base box
