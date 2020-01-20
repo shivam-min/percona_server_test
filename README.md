@@ -18,23 +18,23 @@ An Internet connection for the VM's
 Once you have your requirements ready, we can deploy using below steps :
 1. Setup the Vagrant workspace
 
-mkdir db_server  
+**mkdir db_server**  
 
-cd db_server
+**cd db_server
 
-vagrant init  (This will create the vagrant file)
+**vagrant init  (This will create the vagrant file)
 
 2. Replace the contents of the vagrantfile generated with **config** available in this repository and bring up the box
 
-cat config > Vagrantfile
+**cat config > Vagrantfile
 
-vagrant up 
+**vagrant up 
 
 3.Once the box is up, we can perform unattended install of Percona server for MySql
 
 Copy the install.sh bash script from this repo.
 
-Execute the script :  sudo sh install.sh  (This will deploy and bring up the percona server with password set as *"root"*)
+Execute the script :  **sudo sh install.sh**  (This will deploy and bring up the percona server with password set as *"root"*)
 
 Note : To use a different password , modify the variables at the begining of the install.sh script 
 
@@ -43,13 +43,13 @@ These are the step to run to be able to setup everything you need.
 
 ### VirtualBox
 
-**On RedHat/CentOS/Fedora** 
-yum install virtualbox
+*On RedHat/CentOS/Fedora** 
+**yum install virtualbox
  
-**On Ubuntu/Debian**
-apt-get install virtualbox
+*On Ubuntu/Debian**
+**apt-get install virtualbox
 
 ### Vagrant
 
-apt-get install vagrant
-Import the base box
+**apt-get install vagrant**
+
