@@ -8,7 +8,8 @@ We will use virtualbox as provider for vagrant
 
 A Ubuntu 16 x86_64 box to use with Vagrant.
 VirtualBox - https://www.virtualbox.org/
-a working Vagrant environment - http://vagrantup.com/
+
+A working Vagrant environment - http://vagrantup.com/
 an Internet connection for the VM's
 
 
