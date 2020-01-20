@@ -19,13 +19,13 @@ These are the step to run to be able to setup everything you need.
 
 ### VirtualBox
 
-On RedHat/CentOS/Fedora  
+**On RedHat/CentOS/Fedora** 
 yum install virtualbox
  
-On Ubuntu/Debian
+**On Ubuntu/Debian**
 apt-get install virtualbox
 
-### vagrant
+### Vagrant
 
 apt-get install vagrant
 Import the base box
