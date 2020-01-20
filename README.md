@@ -13,17 +13,11 @@ an Internet connection for the VM's
 ## Instructions to use
 Once you have your requirements ready, it's very easy to deploy your boxes:
 
-$ git clone https://github.com/lefred/percona-cluster.git
-$ cd percona-cluster
-$ vagrant up
-This will deploy the 3 machines: percona1, percona2 and percona3.
-
-And this is all !
 
 ## How to setup the environment
 These are the step to run to be able to setup everything you need.
 
-# VirtualBox
+### VirtualBox
 
 On RedHat/CentOS/Fedora  
 yum install virtualbox
@@ -31,7 +25,7 @@ yum install virtualbox
 On Ubuntu/Debian
 apt-get install virtualbox
 
-# vagrant
+### vagrant
 
 apt-get install vagrant
 Import the base box
