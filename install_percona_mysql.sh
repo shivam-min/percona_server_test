@@ -11,5 +11,5 @@ sudo apt-get update
 echo "percona-server-server-5.7 percona-server-server-5.7/root-pass password $MYSQL_ROOT_PASSWORD" | debconf-set-selections
 echo "percona-server-server-5.7 percona-server-server-5.7/re-root-pass password $MYSQL_ROOT_PASSWORD" | debconf-set-selections
 
-#install the percona server package and set it up
+#install the percona server package and set ip up
 sudo apt-get install -y  percona-server-server-5.7
