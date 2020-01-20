@@ -34,7 +34,8 @@ Once you have your requirements ready, we can deploy using below steps :
 
 Login to the VM using ssh
 
-**cd /db_servre**
+**cd db_server**
+
 **vagrant ssh**
 
 Copy the install_percona_mysql.sh bash script from this repo.
